@@ -1,8 +1,57 @@
-<html>
-    <head>
-        <title>Donna's Site</title>
-    </head>
-    <body>
-        <h1>Hello world!</h1>
-    </body>
+<?xml version = "1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"');
+"\n";
+"http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Donna Fang | portfolio</title>
+<link href="home.css" rel="stylesheet" type="text/css" /> 
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" />
+</head>
+
+<body>
+
+	<div id="navbar">
+		<ul>
+			<li id="name"><a href="index.html"> DONNA FANG </a></li>
+			<li class="right"><a href="artproject.html"> art projects </a></li>
+			<li class="right"><a href="webproject.php"> web projects </a></li>
+			<li class="right"><a href="webdesign.html"> web design </a></li>
+			<li class="right"><a href="about.html"> about me </a></li>
+
+		</ul>
+	</div>
+
+	<p id="welcome">
+
+		welcome.
+
+	</p>
+
+	<script type = "text/javascript">
+
+		window.setInterval(give_shadow, 1000);
+		window.setInterval(remove_shadow, 5100);
+
+		welcomeNode = document.getElementById("welcome");
+
+		// welcomeNode.onmouseover = function() {give_shadow()};
+		// welcomeNode.onmouseout = function() {remove_shadow()};
+
+		function give_shadow() {
+			// welcomeNode.style.textShadow = "2px 5px 5px #9ecaed";
+			welcomeNode.style.textShadow = "10px 10px 10px #9ecaed";
+		}
+
+		function remove_shadow() {
+			welcomeNode.style.textShadow = "0px 0px 0px";
+		}
+	</script>
+
+</body>
+
 </html>
+
