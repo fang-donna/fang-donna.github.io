@@ -7,49 +7,178 @@
 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Donna Fang | portfolio</title>
+<title>Donna Fang</title>
 <link href="home.css" rel="stylesheet" type="text/css" /> 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<link href="home.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 
-	<div id="navbar">
-		<ul>
-			<li id="name"><a href="index.html"> DONNA FANG </a></li>
-			<li class="right"><a href="artproject.html"> art projects </a></li>
-			<li class="right"><a href="webproject.php"> web projects </a></li>
-			<li class="right"><a href="webdesign.html"> web design </a></li>
-			<li class="right"><a href="about.html"> about me </a></li>
+	<!--Flexbox #1: _intro panel_ -->
+	<div class="flex_intro flex_container">
+		<div>
+			<p class="ml12"> DONNA FANG </p>
 
-		</ul>
+			<p id="intro_text"> ux/ui design portfolio </p>
+			<br><br>
+			<a href="www.linkedin.com/in/donna-fang" class="media_button linked_in"><img src="assets/linkedin_logo.svg" alt="linkedin" height="6%"/></a>
+			<a class="media_button" href="www.fang-donna.github.io"><img src="assets/github_logo.svg" alt="github" height="6%"/></a>
+			<a class="media_button" href="www.behance.net/dfang98d046"><img src="assets/behance_logo.png" alt="behance" height="6.7%"/></a>
+			<a class="media_button" href="assets/dfang_resume.pdf"><img src="assets/resume_logo.svg" alt="resume" height="6%"/></a>
+		</div>
+		
+		<div id="rose_img">
+			<img src="assets/rose_transparent 2.png" alt="rose" height="100%"/>
+		</div>
+			<a class="arrow" href="#webdesign"> <img alt="go_down" src="assets/arrow.png" height = "20%"> </a>
 	</div>
+	<!--End of Flexbox #1-->
+	
+	
+	<!--Flexbox #2: _web design_ preview panel-->
+	<a name="webdesign"></a>
+	
+	<div class="flex_design flex_container">
+		<div id="design_text">
+			<h1 class="title"> cross roads c.a.c. </h1>
+			<p>
+			A redesign project of the landing and about us page for Cross Roads C.A.C. The main goal of this project is to create a more tidy and user-friendly interface, with stylistic edits and a more effective use of graphics and images.  
+			<br><br>	
+			Cross Roads C.A.C. is a non-profit organization that provides assistance and services for affordable housing within low-income communities.
+			<br><br>
+				<a class="plain_link" href="webdesign.html"><u>view my process</u></a>
+			</p>
+		</div>
+		
+		<div id="design_preview">
+			<a href="webdesign.html"> <img src="assets/crossroads.png" alt="crossroads_1" height="80%"> </a>
+		</div>
+		
+		<!-- <a class="arrow" href="#about"> <img alt="go_down" src="assets/arrow.png" height = "20%"> </a> -->
+	</div>
+	<!--End of Flexbox #2-->
+	
+	
+	<!--Flexbox #3: _about_ preview panel-->
+	<a name="about"></a>
+	
+	<div class="flex_about flex_container" height="100%" width="100%">
+    	<div id="about_img" width="50%" height="100%">
+			<img src="assets/donna_fang.JPG" id="overlay_container" alt="donna_fang_photo"/>
+			<img src="assets/donna_fang2.jpg" id="overlay"/>
+		</div>
 
-	<p id="welcome">
+		<div id="bio_text" width="50%" height="100%">
+            <h1 class="title"> a little about me  </h1>
+            <br>
+            + I am a 3rd year student at UCLA.
+            <br><br>
+			+ Majoring in cognitive science with a specialization in computing.
+			<br><br>
+			+ From the Bay Area.
+			<br><br>
+			+ I like sci-fi and space documentaries.
+			<br><br>
+			+ A rainy day in with your favorite music playing through the speakers is the perfect recipe for daydreaming.
+        </div>
+	</div>
+	<!--End of Flexbox #3-->
 
-		welcome.
+	<!--Flexbox #4: _contact_form_panel-->
+	<a name="contact"></a>
 
-	</p>
+	<div class="flex_contact flex_container">
+		<div class="form flex_container">
+			<h1 class="title">shoot me a message</h1>
+			<br>
+			<form action="mailto:fangdonna@gmail.com" method="post" enctype="text/plain">
+	  		<label for="name"> name </label>
+			<input type="text" name="name"><br><br>
+			<label for="email"> e-mail </label>
+			<input type="text" name="mail"><br><br>
+			<label id="message" for="message"> message </label>
+			<input type="text" name="comment" size="50"><br><br>
+
+			<input class="button" type="submit" value="send">
+			<br><br>
+			<input class="button" type="reset" value="reset">
+			</form>
+		</div>
+
+		<img src="assets/astro.png" id="astro"/>
+	</div>
+	<!--End of Flexbox #4-->
+	
 
 	<script type = "text/javascript">
 
-		window.setInterval(give_shadow, 1000);
-		window.setInterval(remove_shadow, 5100);
+	// Animate landing text.
+	// Wrap every letter in a span
+	// $('.ml12').each(function(){
+	//   $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+	// });
 
-		welcomeNode = document.getElementById("welcome");
+	// anime.timeline({loop: true})
+	//   .add({
+	//     targets: '.ml12 .letter',
+	//     translateX: [40,0],
+	//     translateZ: 0,
+	//     opacity: [0,1],
+	//     easing: "easeOutExpo",
+	//     duration: 1200,
+	//     delay: function(el, i) {
+	//       return 500 + 30 * i;
+	//     }
+	//   }).add({
+	//     targets: '.ml12 .letter',
+	//     translateX: [0,-30],
+	//     opacity: [1,0],
+	//     easing: "easeInExpo",
+	//     duration: 1100,
+	//     delay: function(el, i) {
+	//       return 100 + 30 * i;
+	//     }
+	//   });
+		
+		// Text shadow effect //
+		introNode = document.getElementById("intro_text");
 
-		// welcomeNode.onmouseover = function() {give_shadow()};
-		// welcomeNode.onmouseout = function() {remove_shadow()};
+		introNode.onmouseover = function() {give_shadow()};
+		introNode.onmouseout = function() {remove_shadow()};
 
 		function give_shadow() {
-			// welcomeNode.style.textShadow = "2px 5px 5px #9ecaed";
-			welcomeNode.style.textShadow = "10px 10px 10px #9ecaed";
+//			introNode.style.textShadow = "2px 5px 5px #9ecaed"; //Less of a shadow look.//
+			introNode.style.textShadow = "10px 10px 10px #fffff0";
 		}
 
 		function remove_shadow() {
-			welcomeNode.style.textShadow = "0px 0px 0px";
+			introNode.style.textShadow = "0px 0px 0px";
 		}
+		
+		// Function for hover effect--crossroads image. //
+		crossroadsNode = document.getElementById("design_preview");
+		textNode = document.getElementById("design_text");
+
+		crossroadsNode.onmouseover = function() {remove_opacity_cross()};
+		crossroadsNode.onmouseout = function() {give_opacity_cross()};
+		
+		function remove_opacity_cross() {
+		// 	crossroadsNode.style.opacity = "1";
+			textNode.style.opacity = "0.5";
+		}
+		
+		function give_opacity_cross() {
+		// 	crossroadsNode.style.opacity = "0.5";
+			textNode.style.opacity="1";
+		}
+
+	
 	</script>
+
+
 
 </body>
 
