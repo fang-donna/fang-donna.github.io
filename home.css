@@ -38,8 +38,8 @@ body {
 }
 
 
-/* Previous landing text class name.
-/*.intro_name .letter {
+/*Previous landing text class name.*/
+.intro_name .letter {
   display: inline-block;
   line-height: 1em;
 }
@@ -50,7 +50,7 @@ body {
 	letter-spacing: 25px;
 	font-family: 'Open Sans Condensed', sans-serif;    
 
-}*/
+}
 
 .media_button {
 	padding-right: 20px;
